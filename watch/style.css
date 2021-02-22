@@ -1,0 +1,27 @@
+#tvContainer {
+  width: 70vw;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  height: 80vh;
+  border-left: none !important;
+  border-right: none !important;
+  border: solid white 3px;
+  border-radius: 3px;
+  z-index: 100;
+}
+
+#tvContainer:hover {
+   border: solid #BEF202 3px;
+}
+
+#bg {
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+html,body {
+  overflow-x: hidden;
+}
