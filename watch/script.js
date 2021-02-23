@@ -3,9 +3,9 @@
 ////////////////////////////
 $(function(){
     console.log("Hello");
-	$('#source').tooltipster();
+	$('input').tooltipster();
     $('input[type=submit]').click(function(){
-        $('#source').tooltipster('close');
+        $('input').tooltipster('close');
         var src = $('#source').val().trim();
         if(src.length < 3){
             $('#source').focus();
@@ -13,13 +13,17 @@ $(function(){
             return;
         }
 
+        var btn = $(this);
         var amt = $(this).val().split("UGX")[1].trim();
         var transaction = src + ":" + amt;
         console.log(transaction);
         $.post('https://amtracy.chwezi.tech/api/pm/inito/', {
             from: src,
             amount: amt,
-            reason: '266TV'
+            reason: '266TV',
+            success: function(){
+                alert("Please inform the source party to authorize the transaction with their PIN. Thanks!");
+            }
         });
 
     });
