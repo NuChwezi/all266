@@ -1,3 +1,9 @@
+#tvContainer, #business {
+  width: 70vw;
+  margin-left: 15vw;
+  margin-right: 15vw;
+}
+
 #tvContainer {
   width: 70vw;
   margin-left: 15vw;
@@ -22,6 +28,29 @@
   height: 100vh;
 }
 
+#business table {
+    width: 100%;
+    text-align: center;
+    background-color: #ccc;
+    border: solid white 3px;
+    border-radius: 3px;
+}
+#business table input {
+    padding: 2px;
+    width: 99%;
+    border: solid white 3px;
+    border-radius: 3px;
+}
+
+#business table input[type=submit]:hover {
+    border: solid orange 3px;
+    border-top: none !important;
+    border-bottom: none !important;
+    cursor: pointer;
+}
+
 html,body {
   overflow-x: hidden;
 }
+
+

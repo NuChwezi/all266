@@ -1,3 +1,36 @@
+/////////////////////////////
+// B STUFF....
+////////////////////////////
+$(function(){
+    console.log("Hello");
+	$('#source').tooltipster();
+    $('input[type=submit]').click(function(){
+        $('#source').tooltipster('close');
+        var src = $('#source').val().trim();
+        if(src.length < 3){
+            $('#source').focus();
+            $('#source').tooltipster('open');
+            return;
+        }
+
+        var amt = $(this).val().split("UGX")[1].trim();
+        var transaction = src + ":" + amt;
+        console.log(transaction);
+        $.post('https://amtracy.chwezi.tech/api/pm/inito/', {
+            from: src,
+            amount: amt,
+            reason: '266TV'
+        });
+
+    });
+});
+
+
+
+
+
+/////////////////////////////
+// BACKGROUND STUFF....
 var canvas = document.querySelector('canvas');
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;

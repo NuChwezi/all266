@@ -5,10 +5,26 @@
   <title>266 LIVE!</title>
   <link rel="stylesheet" href="./style.css">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/4.2.8/css/tooltipster.bundle.css" integrity="sha512-3zyscitq6+9V1nGiptsXHLVaJaAMCUQeDW34fygk9LdcM+yjYIG19gViDKuDGCbRGXmI/wiY9XjdIHdU55G97g==" crossorigin="anonymous" />
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/4.2.8/js/tooltipster.bundle.min.js" integrity="sha512-ZKNW/Nk1v5trnyKMNuZ6kjL5aCM0kUATbpnWJLPSHFk/5FxnvF9XmpmjGbag6BEgmXiz7rL6o6uJF6InthyTSg==" crossorigin="anonymous"></script>
+
 </head>
 <body>
 <!-- partial:index.partial.html -->
 <iframe id="tvContainer" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL9nqA7nxEPgvQnP7OuLyXdQjdCCA3QgJY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!-- let's make some money too -->
+<div id="business">
+    <table>
+        <tr><td colspan=2><input id="source" title="Specify a correct source account" placeholder="Enter Source MMoney AC as NNNXXXDDDDDD    | Example: 256791000001" id="source_ac" type="tel"></td></tr>
+        <tr><td><input id="process_1000" value="DONATE UGX 1000" type="submit"></td>
+        <td><input id="process_5000" value="DONATE UGX 5000" type="submit"></td></tr>
+        <tr><td><input id="process_10000" value="OFFER UGX 10000" type="submit"></td>
+        <td><input id="process_50000" value="OFFER UGX 50000" type="submit"></td></tr>
+    </table>
+</div>
 
 <script id="sf" type="x-shader/x-fragment">
 #ifdef GL_ES
