@@ -4,6 +4,16 @@
   margin-right: 15vw;
 }
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+	#tvContainer {
+	  height: 60vh;
+	}
+	#business p, #business input{
+        font-size: x-small;
+    }
+}
+
 #tvContainer {
   width: 70vw;
   margin-left: 15vw;
@@ -37,7 +47,7 @@
 }
 #business table input {
     padding: 2px;
-    width: 99%;
+    width: 95%;
     border: solid white 3px;
     border-radius: 3px;
 }
