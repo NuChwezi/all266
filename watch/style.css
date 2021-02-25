@@ -8,7 +8,7 @@
   width: 70vw;
   margin-left: 15vw;
   margin-right: 15vw;
-  height: 80vh;
+  height: 70vh;
   border-left: none !important;
   border-right: none !important;
   border: solid white 3px;
@@ -49,8 +49,10 @@
     cursor: pointer;
 }
 
+.message {
+    font-size: small;
+}
+
 html,body {
   overflow-x: hidden;
 }
-
-
