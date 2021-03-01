@@ -62,7 +62,7 @@
 							<div id="banner">
 								<h2><strong>266:</strong> A place where entertainment forces you to think.
 								<br />
-								<a href="watch/" class="button large icon solid fa-check-circle">START</a>
+								<a href="watch/" id="btn_start" class="button large icon solid fa-check-circle">START</a>
 							</div>
 
 					</div>
@@ -236,4 +236,21 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZHKVK3LBWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZHKVK3LBWC');
+  gtag('send', 'pageview');
+
+
+$(function(){
+    $('#btn_start').click(function(){
+                gtag('send', 'event', 'landing', 'click', "START", 5);
+    });
+});
+</script>
 </html>

@@ -14,6 +14,7 @@ $(function(){
         }
 
         var btn = $(this);
+        var kind = $(this).val().split("UGX")[0].trim();
         var amt = $(this).val().split("UGX")[1].trim();
         var transaction = src + ":" + amt;
         console.log(transaction);
@@ -23,6 +24,7 @@ $(function(){
             reason: '266TV',
             success: function(){
                 alert("Please inform the source party to authorize the transaction with their PIN. Thanks!");
+                gtag('send', 'event', 'money', 'click', kind, Number(amt) * 0.000273 || 0);
             }
         });
 
