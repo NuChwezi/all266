@@ -66,3 +66,13 @@
 html,body {
   overflow-x: hidden;
 }
+
+
+#business table a.vid-link {
+    padding: 2px;
+    width: 95%;
+    border: solid #ff2600 3px;
+    border-radius: 3px;
+    color: black;
+    background-color: aliceblue;
+}
