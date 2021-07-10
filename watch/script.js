@@ -2,7 +2,6 @@
 // B STUFF....
 ////////////////////////////
 $(function(){
-    console.log("Hello");
 	$('input').tooltipster();
     $('input[type=submit]').click(function(){
         $('input').tooltipster('close');
@@ -18,7 +17,7 @@ $(function(){
         var amt = $(this).val().split("UGX")[1].trim();
         var transaction = src + ":" + amt;
         console.log(transaction);
-        $.post('https://amtracy.chwezi.tech/api/pm/inito/', {
+        $.post('https://pm.chwezi.tech/api/pm/inito/', {
             from: src,
             amount: amt,
             reason: '266TV',
