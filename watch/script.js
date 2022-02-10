@@ -14,7 +14,8 @@ $(function(){
 
         var btn = $(this);
         var kind = $(this).val().split("UGX")[0].trim();
-        var amt = $(this).val().split("UGX")[1].trim();
+        //var amt = $(this).val().split("UGX")[1].trim();
+        var amt = $(this).attr("data-value");
         var transaction = src + ":" + amt;
         console.log(transaction);
         $.post('https://pm.chwezi.tech/api/pm/inito/', {
