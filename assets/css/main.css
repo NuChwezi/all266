@@ -1529,6 +1529,10 @@ input, select, textarea {
 				background-color: #363a42;
 			}
 
+.button.cog {
+    background-color: #cddc39;
+}
+
 /* List */
 
 	dl.contact dt {
