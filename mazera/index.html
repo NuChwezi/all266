@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>MAZERA | other melodic metal</title>
+  <link rel="stylesheet" href="./style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/4.2.8/css/tooltipster.bundle.css" integrity="sha512-3zyscitq6+9V1nGiptsXHLVaJaAMCUQeDW34fygk9LdcM+yjYIG19gViDKuDGCbRGXmI/wiY9XjdIHdU55G97g==" crossorigin="anonymous" />
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/4.2.8/js/tooltipster.bundle.min.js" integrity="sha512-ZKNW/Nk1v5trnyKMNuZ6kjL5aCM0kUATbpnWJLPSHFk/5FxnvF9XmpmjGbag6BEgmXiz7rL6o6uJF6InthyTSg==" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<iframe id="tvContainer" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL9nqA7nxEPgvsKV4OkvqPCZAw0hB6n1tx" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!-- let's make some money too -->
+<div id="business">
+    <table>
+        <tr><td><p class="message">
+
+<a href="/" class="vid-link"> &lt; &lt; BACK HOME</a>
+                
+                </p>
+            </td>
+            <td><p class="message">Sometimes YouTube is broken. <a href="https://youtube.com/playlist?list=PL9nqA7nxEPgvsKV4OkvqPCZAw0hB6n1tx" class="vid-link" target="_blank">Having Issues? Watch Directly on YouTube</a></p></td></tr>
+        <tr><td colspan=2><p class="message" title="Currently, this reward system only supports mobile money. We appreciate when you appreciate what we do!">This is Art meant to be enjoyed. We especially enjoy making it! So, enjoy it too - if u lyk thes kinda stiff!</p></td></tr>
+        <tr><td colspan=2><input id="source" title="Specify a correct source account" placeholder="Enter Source MMoney AC as NNNXXXDDDDDD    |   Example: 256791000001" id="source_ac" type="tel"></td></tr>
+        <tr><td><input id="process_1000" data-value="1000" value="OFFER UGX 2500" type="submit" title="Thanks for supporting our work!" ></td>
+        <td><input id="process_5000" data-value="5000" value="OFFER UGX 7000" type="submit" title="Thanks for supporting our work!" ></td></tr>
+        <tr><td><input id="process_10000" data-value="10000" value="REWARD UGX 12000" type="submit" title="Thanks for supporting our work!" ></td>
+        <td><input id="process_50000" data-value="50000" value="REWARD UGX 55000" type="submit" title="Thanks for supporting our work!" ></td></tr>
+    </table>
+</div>
+
+<script id="sf" type="x-shader/x-fragment">
+#ifdef GL_ES
+precision mediump float;
+#endif
+
+float hash (float v) {
+  return smoothstep(0.1, 0.9, abs(sin(v))) * 20.0;
+}
+
+uniform float time;
+uniform vec2 mouse;  
+uniform vec2 resolution;
+
+void main(void) {
+    vec2 q = gl_FragCoord.xy / resolution.xy;
+    vec2 p = -1.0 + 2.0 * q;		
+    p.x *= resolution.x / resolution.y;	
+    	
+    vec3 col = vec3(0.2, 0.3, 0.4);
+    vec3 c = vec3(0.0);	
+    c += col / (abs(tan(hash(p.x) + cos(time + p.y) + mouse.y * 10.0))); 
+    c += col / (abs(tan(hash(p.y) + cos(time + p.x) + mouse.x * 10.0)));
+    c /= 5.0;	
+	
+    gl_FragColor = vec4(c, 1.0);
+}
+</script>
+<script id="sv" type="x-shader/x-vertex">
+  attribute vec4 vPosition;
+  void main (void) {
+  gl_Position = vPosition;
+  }
+</script>
+<canvas id="bg"></canvas>
+<!-- partial -->
+  <script  src="./script.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZHKVK3LBWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZHKVK3LBWC');
+  gtag('send', 'pageview');
+</script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+#tvContainer, #business {
+  width: 70vw;
+  margin-left: 15vw;
+  margin-right: 15vw;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+	#tvContainer {
+	  height: 60vh;
+	}
+	#business p, #business input{
+        font-size: x-small;
+    }
+}
+
+#tvContainer {
+  width: 70vw;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  height: 70vh;
+  border-left: none !important;
+  border-right: none !important;
+  border: solid white 3px;
+  border-radius: 3px;
+  z-index: 100;
+}
+
+#tvContainer:hover {
+   border: solid #BEF202 3px;
+}
+
+#bg {
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+#business table {
+    width: 100%;
+    text-align: center;
+    background-color: #ccc;
+    border: solid white 3px;
+    border-radius: 3px;
+}
+#business table input {
+    padding: 2px;
+    width: 95%;
+    border: solid white 3px;
+    border-radius: 3px;
+}
+
+#business table input[type=submit]:hover {
+    border: solid orange 3px;
+    border-top: none !important;
+    border-bottom: none !important;
+    cursor: pointer;
+}
+
+.message {
+    font-size: small;
+}
+
+html,body {
+  overflow-x: hidden;
+}
+
+
+#business table a.vid-link {
+    padding: 2px;
+    width: 95%;
+    border: solid #ff2600 3px;
+    border-radius: 3px;
+    color: black;
+    background-color: aliceblue;
+}
