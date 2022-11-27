@@ -1533,6 +1533,11 @@ input, select, textarea {
     background-color: #cddc39;
 }
 
+
+.button.shrine {
+    background: border-box;
+}
+
 /* List */
 
 	dl.contact dt {
