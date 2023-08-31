@@ -1534,6 +1534,16 @@ input, select, textarea {
 }
 
 
+.button.menuza {
+    background-color: #E91E63;
+}
+
+
+.button.mazera {
+    background-color: #322f2f;
+}
+
+
 .button.shrine {
     background: border-box;
 }
@@ -2351,6 +2361,7 @@ input, select, textarea {
 				text-align: center;
 				padding: 1em 0 1em 0;
 				border-radius: 8px;
+                margin-bottom: 5px;
 			}
 
 		/* List */
